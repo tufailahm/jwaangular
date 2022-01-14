@@ -1,5 +1,5 @@
 <h1><font color=green>{{message}}</font></h1>
-<p>Product List</p>
+<h2 appHoverFocus>{{title | uppercase}}</h2>
 <div *ngIf="products.length >= 0">
     <table border="1" cellspacing="10" cellpadding="10">
 
@@ -12,9 +12,9 @@
 
         <tr *ngFor="let product of products">
             <td>{{product.productId}}</td>
-            <td>{{product.productName}}</td>
+            <td>{{product.productName | uppercase}}</td>
             <td>{{product.quantityOnHand}}</td>
-            <td>{{product.price}}</td>
+            <td>{{product.price | currency:'USD'}}</td>
             <td><button class="btn btn-danger" (click)="deleteProduct(product.productId)">Delete</button></td>
             <td><button class="btn btn-danger" (click)="deleteProduct(product.productId)">Edit</button></td>
 

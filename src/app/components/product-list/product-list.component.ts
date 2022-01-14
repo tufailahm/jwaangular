@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
 
   message !: string;
   products: Product[] = []
+  title: string = "#-- JWA Product APP - Nice PRODUCT App --#"
   constructor(public productService:ProductService,public router:Router) { }
 
   ngOnInit(): void {
